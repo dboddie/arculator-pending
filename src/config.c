@@ -1,11 +1,12 @@
 #include <allegro.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "arc.h"
 #include "arm.h"
 
 void loadconfig()
 {
-        char *p;
+        const char *p;
         p=get_config_string(NULL,"limit_speed",NULL);
         if (!p || strcmp(p,"0")) limitspeed=1;
         else                     limitspeed=0;
